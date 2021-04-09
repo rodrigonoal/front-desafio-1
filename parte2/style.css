@@ -26,10 +26,20 @@ header>img {
     height: 42.6px;
 }
 
-header>a {
-    
-    font: 14px 'Open Sans', sans-serif;
+a {
     color: #545454;
+    text-decoration: none;
+    all: unset;
+}
+
+a:hover, #boxPesquisa:hover, td:hover, td:hover ~ td, button:hover, input:hover, textarea:hover{
+    cursor:pointer;
+    color: inherit;
+}
+
+
+header>a {
+    font: 14px 'Open Sans', sans-serif;
     margin: 0 24px 0 24px;
 }
 

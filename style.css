@@ -32,10 +32,14 @@ a {
     all: unset;
 }
 
+a:hover, #boxPesquisa:hover, td:hover, td:hover ~ td, button:hover{
+    cursor:pointer;
+    color: inherit;
+}
+
 header>a{
     text-decoration: none;
     font: 14px 'Open Sans', sans-serif ;
-    color: #545454;
     margin: 0 24px 0 24px;
 }
 
@@ -130,6 +134,7 @@ td:hover, td:hover ~ td{
     color: #FE0078;
     border-bottom: 2px dashed #FE0078;
 }
+
 .propaganda{
     display: flex;
     justify-content: center;
