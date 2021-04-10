@@ -12,14 +12,15 @@ header, footer {
     align-items: center;
 }
 
-
 header {
     height: 10vh;
     background-color: #FFFFFF;
     padding: 5vh 15vh 5vh 15vh;
     justify-content: space-between;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+    margin-bottom: 56px;
 }
+
 header>img {
     margin-right: auto;
     width: 218.01px;
@@ -32,14 +33,14 @@ a {
     all: unset;
 }
 
-a:hover, #boxPesquisa:hover, td:hover, td:hover ~ td, button:hover{
+a:hover, #boxPesquisa:hover, td:hover, td:hover ~ td, button:hover, input:hover, textarea:hover{
     cursor:pointer;
     color: inherit;
 }
 
-header>a{
-    text-decoration: none;
-    font: 14px 'Open Sans', sans-serif ;
+
+header>a {
+    font: 14px 'Open Sans', sans-serif;
     margin: 0 24px 0 24px;
 }
 
@@ -53,35 +54,29 @@ footer {
     justify-content: center;
     height: 10vh;
     background-color: #222222;
-    font: 14px 'Open Sans', sans-serif ;
-    color: #FFFFFF
+    font: 14px 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    margin-top: 64px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr 4fr 1fr;
-    grid-template-rows: 1fr 1fr 12fr 1fr 1fr 1fr 12fr 1fr 1fr 1fr 12fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0,2fr 0,5fr 1fr;
     grid-template-areas: 
     ". . . . ." 
     ". card-1 . sidebar ." 
     ". card-1 . sidebar ." 
     ". card-1 . sidebar ." 
     ". . . sidebar ." 
-    ". card-2 . sidebar ." 
-    ". card-2 . sidebar ." 
-    ". card-2 . . ." 
     ". . . . ." 
-    ". card-3 . . ." 
-    ". card-3 . . ."
-    ". card-3 . . ." 
-    ". . . . .";
 }
 
 .grid, .sidebar {
     background-color: #FFFFFF;
 }
 
-.sidebar{
+.sidebar {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -91,8 +86,14 @@ footer {
     border-radius: 4px;
 }
 
-input, button{
+input, button, textarea {
     all: unset;
+    border-radius: 2px;
+}
+
+input, textarea {
+    background-color: #ffffff;
+    border: 1px solid #EEEEEE;
 }
 
 #boxPesquisa {
@@ -101,48 +102,69 @@ input, button{
     padding: 17px 0 16px 20px;
     margin-bottom: 20px;
 }
-#boxPesquisa::placeholder{
-    font: 400 14px 'Open Sans', sans-serif ;
+
+#boxPesquisa::placeholder {
+    font: 400 14px 'Open Sans', sans-serif;
     color: #545454;
 }
-#boxPesquisa:hover{
+
+#boxPesquisa:hover, #nome:hover, #email:hover, #comentario:hover, #assunto:hover{
     border: 1px solid #FE0078;
 }
 
+#nome, #email {
+    width: 329px;
+    height: 42px;
+}
+
+#assunto {
+    height: 42px;
+}
+
+#comentario {
+    width: 682px;
+    height: 176px;
+    resize: none;
+    border: none;
+}
 
 table {
     border-collapse: collapse;
     margin: 20px 0 20px 0;
 }
+
 th {
-    font: 700 18px 'Open Sans', sans-serif ;
-    border-left: 2px solid  #FE0078;
+    font: 700 18px 'Open Sans', sans-serif;
+    border-left: 2px solid #FE0078;
     text-align: left;
     padding: 0.3em 0 0.3em 11px;
 }
+
 td {
-    font: 400 14px 'Open Sans', sans-serif ;
+    font: 400 14px 'Open Sans', sans-serif;
     color: #545454;
     border-bottom: 2px dashed #EEEEEE;
     margin: 0 0 28px 0;
     padding: 1em 0 1em 11px;
 }
+
 td:nth-child(even) {
     text-align: right;
 }
-td:hover, td:hover ~ td{
+
+td:hover, td:hover~td {
     color: #FE0078;
     border-bottom: 2px dashed #FE0078;
 }
 
-.propaganda{
+.propaganda {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 240px;
     width: 340px;
     background-color: #EEEEEE;
-    font: 400 36px 'Open Sans', sans-serif ;
+    font: 400 36px 'Open Sans', sans-serif;
     color: #545454;
     text-align: center;
     margin: 20px 0 20px 0;
@@ -153,58 +175,126 @@ td:hover, td:hover ~ td{
     flex-direction: column;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    padding-bottom: 46px;
 }
 
 .grid:img {
     width: 730px;
     height: 350px;
+    margin-bottom: 24px;
 }
 
 h1 {
-    font: 700 24px 'Open Sans', sans-serif ;
+    font: 700 24px 'Open Sans', sans-serif;
     color: #000000;
     margin: 24px 24px 0 24px;
 }
 
+
+h2 {
+    font: 700 16px 'Open Sans', sans-serif;
+    color: #000000;
+    margin: 15px 0 26px 24px;
+}
+
+
 h3 {
-    font: 400 12px 'Open Sans', sans-serif ;
+    font: 400 12px 'Open Sans', sans-serif;
     color: #929292;
     margin: 8px 24px 14px 24px;
 }
 
-p {
-    font: 400 14px 'Open Sans', sans-serif ;
-    color: #545454;
-    margin: 24px;
+h4 {
+    display: flex;
+    align-content: center;
+    font: 700 14px 'Open Sans', sans-serif;
+    color: #000000;
+    margin: 0 0 0 24px;
 }
 
-button{
-    width: 154px;
+img.small {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+p, ul {
+    font: 400 14px 'Open Sans', sans-serif;
+    color: #545454;
+    margin: 14px 24px 24px 24px;
+}
+
+ul>li, ul>ul {
+    margin: 0;
+}
+
+button {
+    width: 93px;
     height: 43px;
     border: 1px solid #FE0078;
     border-radius: 20px;
-    font: 400 14px 'Open Sans', sans-serif ;
-    color: #545454;
-    text-align: center;
-    align-self: flex-end;
-    margin: 0 24px 24px 0;
-}
-
-
-
-button:hover{
+    font: 700 14px 'Open Sans', sans-serif;
     background-color: #FE0078;
     color: #FFFFFF;
+    text-align: center;
+    align-self: flex-end;
+    margin: 0 24px 0 0;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #FE0078
 }
 
 .card-1 {
     grid-area: card-1;
 }
 
-.card-2 {
-    grid-area: card-2;
+.comments {
+    grid-area: comments;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE;
+    box-shadow: none;
+    margin: 56px 0 64px 0;
 }
 
-.card-3 {
-    grid-area: card-3;
+.form-container {
+    margin: 24px;
+    display: grid;
+    grid-template-columns: 329px 24px 329px;
+    grid-template-rows: 69px 24px 69px 24px 203px;
+    gap: 0px 0px;
+    grid-template-areas: 
+    "nome . email" 
+    ". . ."
+    "assunto assunto assunto"
+    ". . ."
+    "comentario comentario comentario";
+}
+
+.nome {
+    grid-area: nome;
+}
+
+.email {
+    grid-area: email;
+}
+
+.assunto {
+    grid-area: assunto;
+}
+
+.comentario {
+    grid-area: comentario;
+}
+
+.nome, .email, .comentario, .assunto {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font: 400 14px 'Open Sans', sans-serif;
+    color: #545454;
 }
